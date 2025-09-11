@@ -1,0 +1,455 @@
+/*
+/* ================================================= */
+/* 1. ESTILOS GLOBAIS                                */
+/* ================================================= */
+body {
+  background-color: #DDE6F0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.528vw 3.333vw; /* 22px 48px em 1440px */
+}
+
+main {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8.333vw; /* 120px em 1440px */
+  margin-right: 11.944vw; /* 172px em 1440px */
+  margin-top: 2.5vw; /* 36px em 1440px */
+  flex-grow: 1;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1.528vw 3.333vw; /* 22px 48px em 1440px */
+    background-color: #DDE6F0;
+    color: #002D5B;
+    font-size: 2.222vw; /* 32px em 1440px */
+    align-items: center;
+}
+
+/* ================================================= */
+/* 2. ESTILOS DE TIPOGRAFIA                          */
+/* ================================================= */
+h1, h2, h3, h4 ,h5{
+  color: #002D5B;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3.819vw; /* 55px em 1440px */
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 3.056vw; /* 44px em 1440px */
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2.222vw; /* 32px em 1440px */
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 1.944vw; /* 28px em 1440px */
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 1.667vw; /* 24px em 1440px */
+}
+
+p {
+  color: #1E1E1E;
+  font-size: 1.25vw; /* 18px em 1440px */
+  font-weight: 400;
+}
+
+.plarge {
+  font-size: 2.222vw; /* 32px em 1440px */
+}
+
+a {
+  color: inherit;
+  font-style: italic;
+  text-decoration: none;
+  font-size: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================= */
+/* 3. LAYOUT E COMPONENTES                           */
+/* ================================================= */
+
+
+.header-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.556vw; /* 8px em 1440px */
+}
+
+.nav-menu li {
+  border: 1.5px solid #002D5B;
+  border-radius: 1000px;
+}
+
+.nav-menu li:hover {
+  background-color: #002D5B;
+}
+
+.nav-menu a {
+  font-size: 1.25vw; /* 18px em 1440px */
+  display: block;
+  padding: 0.556vw 0.972vw; /* 8px e 14px em 1440px */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #fff;
+}
+
+.logo-main{
+  font-size: 1.667vw; /* 24px em 1440px */
+  font-weight: 600; 
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  color: #002D5B;
+}
+
+.logo-main:hover {
+  text-decoration: none;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin-top: 17.5vw;*/
+}
+
+.logo-main-footer{
+  font-size: 1.667vw; /* 24px em 1440px */
+  font-weight: 600; 
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  color: #002D5B;
+}
+
+.logo-main-footer:hover {
+  text-decoration: none;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 322px;
+}
+
+.profile-image-container img {
+  width: 22.361vw;
+  max-width: 322px;
+  margin: 0 auto 0px auto;
+  height: auto;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5vw; /* 72px em 1440px */
+}
+
+.intro-text {
+  display: inline;
+  gap: 8px;
+  width: 51.458vw;
+
+}
+
+.bio{
+  margin-top: 0.556vw; /* 8px em 1440px */
+}
+
+.about-section {
+  display: flex; /* Habilita o Flexbox */
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.111vw; /* 16px em 1440px */
+}
+
+.about-container {
+  display: flex;
+  height: auto;
+  justify-content:start;
+  align-content: start;
+}
+
+.about-container img {
+  display: flex;
+  margin: 0 auto 0px auto;
+  height: auto;
+}
+
+.about-me {
+  justify-content: center;
+  margin-left: 23.5617vw; /* 450.5px em 1912px */
+}
+
+.company-year {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.111vw; /* 16px em 1440px */
+
+}
+
+.right-column {
+  display: flex; /* Habilita o Flexbox */
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  flex-direction: column;
+  justify-content: center;
+  max-width: 34.0972vw; /* 491px em 1440px */
+}
+
+.left-column {
+  display: inline-block;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 57.6388vw; /* 830px em 1440px */
+  /*margin-top: 5vw;  72px em 1440px */
+}
+
+.block-company{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 1.111vw; /* 16px em 1440px */
+}
+
+.the-path{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3.6111vw; /* 52px em 1440px */
+  margin-top: 5vw;  /* 72px em 1440px */
+  margin-left: 6.236vw; /* 89.8px em 1440px */
+}
+
+.case-studies{
+  font-family: inherit;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.case-studies :hover{
+  font-family: 'Inter', sans-serif;
+  text-decoration: underline;
+}
+
+.social-networks ul {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  gap: 1.111vw; /* 16px em 1440px */
+  justify-content: start;
+  padding: 0px;
+}
+
+.social-networks a {
+  font-weight: 400;
+  font-size: 1.944vw; /* 28px em 1440px */
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: #333;
+}
+
+.social-networks a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) { /* estilos aplicados entre 1440px e 1920px */
+  body {
+    font-size: 18px; /* Sets the maximum font size for the body entre 1440px e 1920px */
+  }
+
+  h1 {
+    font-size: 55px; /* Sets a max font size for h1  entre 1440px e 1920px*/
+  }
+  h2 {
+    font-size: 44px; /* Sets a max font size for h2 entre 1440px e 1920px */
+  }
+  h3 {
+    font-size: 32px; /* Sets a max font size for h3 entre 1440px e 1920px */
+  }
+  h4 {
+    font-size: 28px; /* Sets a max font size for h4 entre 1440px e 1920px */
+  }
+  h5 {
+    font-size: 24px; /* Sets a max font size for h5 entre 1440px e 1920px */
+  }
+  p {
+    font-size: 18px; /* Sets a max font size for p entre 1440px e 1920px */
+  }
+  .p-Header {
+    font-size: 18px; /* Sets a max font size for .p-Header entre 1440px e 1920px */
+  }
+  .trying {
+    width: 741px; /* Sets a max width of 741px for .trying entre 1440px e 1920px */
+  }
+  .nav-menu ul {
+    gap: 8px;
+  }
+  
+  .nav-menu li {
+    font-size: 18px;
+    border: 1px solid #002D5B;
+    border-radius: 1000px;
+  }
+  
+  .nav-menu a {
+    font-size: 18px; /* 18px entre 1440px e 1920px */
+    padding: 8px 14px;
+  }
+  
+  .nav-menu a:hover {
+    color: #fff;
+  }
+  
+  .logo-main{
+    font-size: 24px; /* 24px entre 1440px e 1920px */
+  }
+  
+  .begining {
+    margin-top: 72px; /* 72px entre 1440px e 1920px */
+  }
+  
+  .bio{
+    margin-top: 8px; /* 8px entre 1440px e 1920px */
+  }
+  
+  header {
+    padding: 1.528vw 3.333vw; /* 22px 48px entre 1440px e 1920px */
+  }
+  
+  .footer-trial{
+    display: flex;
+    align-items: center;
+    padding: 37px 48px; /* 37px 48px entre 1440px e 1920px */
+    justify-content: center;
+  }
+  
+  footer {
+    padding: 22px 48px;
+    font-size: 32px; /* 32px entre 1440px e 1920px */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    margin-left: 120px; /* 120px entre 1440px e 1920px */
+    margin-right: 172px; /* 172px entre 1440px e 1920px */
+    margin-top: 36px; /* entre 1440px e 1920px */
+  } 
+  
+  .about-container img {
+    width: 704px;
+    margin: 0 auto 0px auto;
+    height: auto;
+  }
+  
+  .about-me {
+    display: flex;
+    justify-content: center;
+    align-content: end;
+  }
+  
+  .company-year {
+    justify-content: start;
+    gap: 16px; /* 16px em 1440px */
+  }
+
+  .left-column {
+    justify-content: space-between;
+  }
+  .right-column {
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    flex-direction: column;
+    justify-content: center;
+    width: 491px; /* 491px em 1440px */
+  }
+
+  .the-path{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 52px; /* 52px em 1440px */
+    margin-top: 72px;  /* 72px em 1440px */
+  }
+  
+  .block-company{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1.111vw; /* 16px em 1440px */
+    width: 830px; /* 830px em 1440px */
+  }
+  
+  .footer-content-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-networks a {
+  font-weight: 400;
+  font-size: 28px; /* 28px em 1440px */
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: #333;
+}
+}
