@@ -29,8 +29,6 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 8.333vw; /* 120px em 1440px */
-  margin-right: 11.944vw; /* 172px em 1440px */
   margin-top: 2.5vw; /* 36px em 1440px */
   flex-grow: 1;
 }
@@ -102,6 +100,16 @@ a:hover {
 /* 3. LAYOUT E COMPONENTES                           */
 /* ================================================= */
 
+.banner {
+    width: 100%;
+    height: 100vh;
+    max-height: calc(100vh - 244.8px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+}
 
 .header-container {
   display: flex;
@@ -117,26 +125,18 @@ a:hover {
   gap: 0.556vw; /* 8px em 1440px */
 }
 
-.nav-menu li {
-  border: 1.5px solid #002D5B;
-  border-radius: 1000px;
-}
-
-.nav-menu li:hover {
-  background-color: #002D5B;
-}
-
 .nav-menu a {
   font-size: 1.25vw; /* 18px em 1440px */
   display: block;
   padding: 0.556vw 0.972vw; /* 8px e 14px em 1440px */
   text-decoration: none;
-  color: #333;
+  color: #002D5B;
   font-weight: 500;
+  font-style: normal;
 }
 
 .nav-menu a:hover {
-  color: #fff;
+  font-weight: 700;
 }
 
 .logo-main{
@@ -187,21 +187,21 @@ a:hover {
 .hero-section {
   display: flex;
   flex-direction: row;
-  height: 100%;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5vw; /* 72px em 1440px */
+  gap: 8.611vw; /* 124px em 1440px */
 }
 
 .intro-text {
   display: inline;
   gap: 8px;
   width: 51.458vw;
-
+  text-align: start;
 }
 
 .bio{
   margin-top: 0.556vw; /* 8px em 1440px */
+  ;
 }
 
 .about-section {
@@ -210,6 +210,10 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 1.111vw; /* 16px em 1440px */
+  background-color: #002D5B;
+  padding-left: 8.333vw; /* 120px em 1440px */
+  padding-right: 11.944vw; /* 172px em 1440px */
+  
 }
 
 .about-container {
@@ -225,9 +229,10 @@ a:hover {
   height: auto;
 }
 
-.about-me {
-  justify-content: center;
-  margin-left: 23.5617vw; /* 450.5px em 1912px */
+.p-about-me {
+  color: #fff;
+  margin-top: 24px;
+  justify-content: start;
 }
 
 .company-year {
@@ -268,6 +273,7 @@ a:hover {
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  
   gap: 3.6111vw; /* 52px em 1440px */
   margin-top: 5vw;  /* 72px em 1440px */
   margin-left: 6.236vw; /* 89.8px em 1440px */
@@ -282,6 +288,15 @@ a:hover {
 .case-studies :hover{
   font-family: 'Inter', sans-serif;
   text-decoration: underline;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.111vw; /* 16px em 1440px */
+  margin-top: 1.111vw; /* 16px em 1440px */
 }
 
 .social-networks ul {
@@ -341,19 +356,21 @@ a:hover {
   
   .nav-menu li {
     font-size: 18px;
-    border: 1px solid #002D5B;
-    border-radius: 1000px;
   }
   
   .nav-menu a {
     font-size: 18px; /* 18px entre 1440px e 1920px */
     padding: 8px 14px;
   }
-  
-  .nav-menu a:hover {
-    color: #fff;
+  .social-links ul {
+  gap: 16px; /* 16px em 1440px */
+  margin-top: 16px; /* 16px em 1440px */
   }
   
+  .hero-section {
+  gap: 124px;
+  }
+
   .logo-main{
     font-size: 24px; /* 24px entre 1440px e 1920px */
   }
@@ -367,7 +384,7 @@ a:hover {
   }
   
   header {
-    padding: 1.528vw 3.333vw; /* 22px 48px entre 1440px e 1920px */
+    padding: 22px 48px 22px 60px; 
   }
   
   .footer-trial{
@@ -379,7 +396,7 @@ a:hover {
   
   footer {
     padding: 22px 48px;
-    font-size: 32px; /* 32px entre 1440px e 1920px */
+    font-size: 18px; /* 32px entre 1440px e 1920px */
   }
   
   .footer-content {
@@ -389,11 +406,14 @@ a:hover {
   }
   
   main {
-    margin-left: 120px; /* 120px entre 1440px e 1920px */
-    margin-right: 172px; /* 172px entre 1440px e 1920px */
-    margin-top: 36px; /* entre 1440px e 1920px */
+    margin-top: 156px; /* entre 1440px e 1920px */
   } 
   
+  .about{
+  padding-top: 96px; /* 72px em 1440px */
+  padding-bottom: 64px; /* 64px em 1440px */
+  }
+
   .about-container img {
     width: 704px;
     margin: 0 auto 0px auto;
@@ -429,6 +449,10 @@ a:hover {
     gap: 52px; /* 52px em 1440px */
     margin-top: 72px;  /* 72px em 1440px */
   }
+
+  .the-path h1,.the-path h2,.the-path h3,.the-path h4,.the-path h5,.the-path p {
+    color: #f0f0f0;
+  }
   
   .block-company{
     display: flex;
@@ -451,5 +475,14 @@ a:hover {
   font-style: normal;
   text-decoration: none;
   color: #333;
-}
+  }
+  .banner {
+    width: 100%;
+    max-height: calc(100vh - 244.8px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+  }
 }
