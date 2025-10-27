@@ -2,6 +2,10 @@
 /* ================================================= */
 /* 1. ESTILOS GLOBAIS                                */
 /* ================================================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #DDE6F0;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -29,7 +33,6 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 2.5vw; /* 36px em 1440px */
   flex-grow: 1;
 }
 
@@ -109,6 +112,7 @@ a:hover {
     align-items: flex-start;
     overflow: hidden;
     text-align: center;
+    padding: 0px 48px 0px 60px;
 }
 
 .header-container {
@@ -273,7 +277,7 @@ a:hover {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  
+  margin-bottom: 4.5vw; /* 64px em 1440px */
   gap: 3.6111vw; /* 52px em 1440px */
   margin-top: 5vw;  /* 72px em 1440px */
   margin-left: 6.236vw; /* 89.8px em 1440px */
@@ -405,10 +409,6 @@ a:hover {
     align-items: center;
   }
   
-  main {
-    margin-top: 156px; /* entre 1440px e 1920px */
-  } 
-  
   .about{
   padding-top: 96px; /* 72px em 1440px */
   padding-bottom: 64px; /* 64px em 1440px */
@@ -484,5 +484,6 @@ a:hover {
     align-items: flex-start;
     overflow: hidden;
     text-align: center;
+    padding: 0px 48px 0px 60px;
   }
 }
