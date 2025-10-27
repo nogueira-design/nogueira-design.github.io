@@ -39,8 +39,8 @@ main {
 footer {
     margin-top: auto;
     padding: 1.528vw 3.333vw; /* 22px 48px em 1440px */
-    background-color: #DDE6F0;
-    color: #002D5B;
+    background-color: #002D5B;
+    color: #f0f0f0;
     font-size: 2.222vw; /* 32px em 1440px */
     align-items: center;
 }
@@ -325,6 +325,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.the-path h1,.the-path h2,.the-path h3,.the-path h4,.the-path h5,.the-path p {
+    color: #f0f0f0;
+  }
+
+  footer p {
+    color: #f0f0f0;
+  }
+
 @media screen and (min-width: 1440px) and (max-width: 1920px) { /* estilos aplicados entre 1440px e 1920px */
   body {
     font-size: 18px; /* Sets the maximum font size for the body entre 1440px e 1920px */
@@ -451,6 +459,10 @@ a:hover {
   }
 
   .the-path h1,.the-path h2,.the-path h3,.the-path h4,.the-path h5,.the-path p {
+    color: #f0f0f0;
+  }
+
+  footer p {
     color: #f0f0f0;
   }
   
