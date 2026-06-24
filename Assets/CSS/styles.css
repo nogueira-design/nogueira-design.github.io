@@ -27,14 +27,16 @@ body {
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 1.528vw 3.333vw; /* 22px 48px em 1440px */
-}
-
-main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -105,18 +107,47 @@ a:hover {
 }
 
 /* ================================================= */
+/* UTILITY CLASSES                                   */
+/* ================================================= */
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.no-margin-bottom { margin-bottom: 0; }
+
+/* ================================================= */
 /* 3. LAYOUT E COMPONENTES                           */
 /* ================================================= */
+
+.main-content-padding {
+  padding-top: 100px; /* Adjust this value based on your header's height */
+}
 
 .banner {
     width: 100%;
     height: 100vh;
-    max-height: calc(100vh - 244.8px);
+    /* max-height: calc(100vh - 244.8px); */ /* This might be too restrictive. Consider removing or adjusting. */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
-    text-align: center;
+    /* text-align: center; */ /* This was commented out as it might not be needed with flexbox centering */
     padding: 0px 48px 0px 60px;
 }
 
@@ -135,9 +166,9 @@ a:hover {
 }
 
 .nav-menu a {
-  font-size: 1.25vw; /* 18px em 1440px */
+  font-size: 1.389vw; /* 20px em 1440px */
   display: block;
-  padding: 0.556vw 0.972vw; /* 8px e 14px em 1440px */
+  padding: 0.556vw 1.111vw; /* 8px e 16px em 1440px */
   text-decoration: none;
   color: #002D5B;
   font-weight: 500;
@@ -145,6 +176,10 @@ a:hover {
 }
 
 .nav-menu a:hover {
+  font-weight: 700;
+}
+
+.nav-menu a:active {
   font-weight: 700;
 }
 
@@ -197,8 +232,17 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-grow: 1; /* Make hero section take available space */
   justify-content: space-between;
   gap: 8.611vw; /* 124px em 1440px */
+}
+
+.home-hero-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 3.333vw; /* 48px */
+  padding-right: 3.333vw; /* 48px */
 }
 
 .intro-text {
@@ -256,7 +300,7 @@ a:hover {
   display: flex; /* Habilita o Flexbox */
   align-items: center; /* Alinha verticalmente a imagem e o texto */
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 34.0972vw; /* 491px em 1440px */
 }
 
@@ -288,6 +332,16 @@ a:hover {
   margin-left: 6.236vw; /* 89.8px em 1440px */
 }
 
+.right-column p {
+  display: flex;
+}
+
+.right-column-case-study {
+  gap: 1.667vw;
+  align-items: flex-start;
+}
+
+
 .case-studies{
   font-family: inherit;
   font-weight: 600;
@@ -297,6 +351,10 @@ a:hover {
 .case-studies :hover{
   font-family: 'Inter', sans-serif;
   text-decoration: underline;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
 }
 
 .social-links ul {
@@ -321,7 +379,7 @@ a:hover {
   font-weight: 400;
   font-size: 1.944vw; /* 28px em 1440px */
   font-family: 'IBM Plex Sans', sans-serif;
-  font-style: normal;
+  font-style: normal; /* This is already in .nav-menu a, can be consolidated */
   text-decoration: none;
   color: #333;
 }
@@ -336,6 +394,10 @@ a:hover {
 
   footer p {
     color: #f0f0f0;
+  }
+
+  .about-me h3 {
+    color: #fff;
   }
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) { /* estilos aplicados entre 1440px e 1920px */
@@ -489,7 +551,7 @@ a:hover {
   font-weight: 400;
   font-size: 28px; /* 28px em 1440px */
   font-family: 'IBM Plex Sans', sans-serif;
-  font-style: normal;
+  font-style: normal; /* This is already in .nav-menu a, can be consolidated */
   text-decoration: none;
   color: #333;
   }
